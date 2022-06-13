@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cstring>
+#include <conio.h>
+using namespace std;
+
+bool palindrom(char tab[])
+{    
+int dl;    
+dl = strlen(tab);    
+--dl;
+    
+for(int i=0;i<=dl/2;i++)    
+if(tab[i]!=tab[dl-i])       
+return false;
+            
+return true;
+}
+
+int main()
+{    
+int n;    
+char txt[200];   
+cout<<"Ile wyrazow: "<<endl;   
+cin>>n;    
+while(n--)    
+{
+cout<<"Podaj wyraz: ";    
+cin>>txt;    
+if (palindrom(txt))        
+cout<<"To jest palindrom"<<endl;    
+else        
+cout<<"To nie jest palindrom"<<endl;   
+}
+    
+return 0;
+}

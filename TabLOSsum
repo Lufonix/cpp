@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+    srand( time ( NULL ) );
+    int kn;
+    int tys = 1000;
+    int suma=0;
+    do
+    {
+    int taba=0;
+    int tab[tys];
+    do
+    {
+        tab[taba] = ( rand() % 7 ) + 4;
+    cout<<tab[taba]<<endl;
+    suma = suma + tab[taba];
+    
+    taba++;
+    }while(taba<=tys);
+    cout<<suma<<endl;
+    cout<<"Kontynuowac: ";
+    cin>>kn;
+    }while(kn!=0);
+    
+    return 0;
+}

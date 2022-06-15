@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int t = t<=100;
+    cin>>t;
+    do
+    {
+        int n = n<=100;
+        cin>>n;
+        int k = 1, p=n;
+        int tab[100];
+        do
+        {
+            cin>>tab[n];
+            n--;
+        }while(n!=0);
+        do
+        {
+        cout<<tab[k]<<" ";
+        k++;
+        }while(k<=p);
+        t--;
+    }while(t!=0);
+    return 0;
+}

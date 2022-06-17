@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    char z;
+    while(cin>>z)
+    {
+        int a,b;
+        cin>>a>>b;
+    if(z=='+')
+        cout<<a+b<<endl;
+    if(z=='-')
+        cout<<a-b<<endl;
+    if(z=='*')
+        cout<<a*b<<endl;
+    if(z=='/')
+        cout<<a/b<<endl;
+    if(z=='%')
+        cout<<a%b<<endl;
+    }
+    
+    return 0;
+}

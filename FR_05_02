@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int t, duzelitery, malelitery, cyfry, kus,dl;
+    cin>>t;
+    while(t!=0)
+    {
+        string wyraz;
+        getline(cin,wyraz);
+        dl=wyraz.length();
+        if (dl>=8)
+        {
+        for(int i = 0;i<dl;i++)
+        {
+            if(wyraz[i]>=65&&wyraz[i]<=90)
+        {
+            duzelitery=1;
+        }
+        if(wyraz[i]>=97&&wyraz[i]<=122)
+        {
+            malelitery=1;
+        }
+        if(wyraz[i]>=49&&wyraz[i]<=57)
+        {
+            cyfry=1;
+        }
+        else{kus=1;}  
+        }
+        }
+        int spr=duzelitery+malelitery+cyfry+kus;
+        if(spr==4)
+        {
+        cout<<wyraz<<endl;
+        }
+        t--;
+    }
+}

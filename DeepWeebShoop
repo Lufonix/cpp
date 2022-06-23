@@ -8,14 +8,12 @@ void haslo()
 {
     string h;
     int d=1,liczba;
-    do
+    cin>>h;
+    while (h !="kekz" )
     {
-        cin>>h;
-        if(h=="kekz")
-        cout<<"Access granted"<<endl;
-        else
         cout<<"Access denied"<<endl;
-    }while (h!="kekz");
+        cin>>h;
+    }
     do
     {
     cout<<endl;
@@ -29,18 +27,18 @@ int main ()
   float hurt;
   int suma = 0;
   
-      haslo();
+    haslo();
   cout << "Witamy na CZANYM RYNKU"<< endl;
   do
   {
-  cout << "Co chcesz kupic:    " << endl;
-  cout << " 1 - Marihuana      " << endl;
-  cout << " 2 - Amfetamina     " << endl;
-  cout << " 3 - Kokaina        " << endl;
-  cout << " 4 - Metamfetamina  " << endl;
-  cout << " 5 - Drony          " << endl;
+  cout << "Co chcesz kupic: " << endl;
+  cout << " 1 - Marihuana      50/g" << endl;
+  cout << " 2 - Amfetamina     30/g" << endl;
+  cout << " 3 - Kokaina       350/g" << endl;
+  cout << " 4 - Metamfetamina  75/g" << endl;
+  cout << " 5 - Drony          50/g" << endl;
   cin >> co;
-  cout << "                    " << endl;
+  cout << " " << endl;
 
 
   switch(co)
@@ -66,10 +64,12 @@ int main ()
       break;
         
     default:
-    cout<<"|FATAL ERROR:300303303|"<<endl;
+    cout<<"NIE"<<endl;
     return 0;
     break;
   }
+  
+    cout<<"Cena zmniejsza sie zależnie od ilości gramów"<<endl;
     cout<<"Ile gramów chcesz kupic: ";
     cin >> ilg;
 
@@ -104,10 +104,6 @@ int main ()
   else if (ilg <= 5000)
     {
       hurt=0.24;
-    }
-    else
-    {
-    cout<<"|FATAL ERROR:300303303|"<<endl;    
     }
     suma =suma + (ilg*g*hurt);
     cout<<"Do zapłaty: "<<suma<<" zł"<<endl;
